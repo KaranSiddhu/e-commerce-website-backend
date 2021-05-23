@@ -5,7 +5,7 @@ const { body } = require('express-validator');
 
 router.post(
     '/signup',
-    body('firstName').isLength({ min:4 }).withMessage('Name should be 4 char long'),
+    body('name').isLength({ min:4 }).withMessage('Name should be 4 char long'),
     body('password').isLength({ min: 5 }).withMessage('Must be 5 char long'),
     body('email').isEmail().withMessage('Email is in wrong format'),
     signUp
