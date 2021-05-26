@@ -30,7 +30,7 @@ exports.signIn = (req, res) => {
     console.log("REQ BODY",req.body);
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
-      return res.status(400).json({ errors: errors.array() });
+      return res.status(400).json({ error: errors.array() });
     }
 
     const { email, password } = req.body;
