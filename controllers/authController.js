@@ -58,14 +58,14 @@ exports.signIn = (req, res) => {
         
         //* sending response to front end
 
-        const { _id, firstName, email, role } = user;
+        const { _id, name, email, role } = user;
         
         res.status(200).json({
             status:"success",
             token,
             User:{
                 _id,
-                firstName,
+                name,
                 email,
                 role
             }
